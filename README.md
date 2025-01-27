@@ -1,48 +1,30 @@
-[![Build Status](https://travis-ci.com/atotto/clipboard.svg?branch=master)](https://travis-ci.com/atotto/clipboard)
-
-[![GoDoc](https://godoc.org/github.com/atotto/clipboard?status.svg)](http://godoc.org/github.com/atotto/clipboard)
-
 # Clipboard for Go
 
-Provide copying and pasting to the Clipboard for Go.
+CLI tool in Go for cross-platform text copy/paste.
 
-Build:
+## NOTE
 
-    $ go get github.com/atotto/clipboard
+This is the [Original Repository](https://github.com/atotto/clipboard) fork (BSD-3-Clause license), oriented by atotto.
 
-Platforms:
+The differences from the original are as follows:
 
-* OSX
-* Windows 7 (probably work on other Windows)
-* Linux, Unix (requires 'xclip' or 'xsel' command to be installed)
+- Go version used has been rewritten to `1.23` or higher
+- command has been merged and renamed `go-clip`
+- `cobra` is introduced in the cli framework
 
+The basic functionality and behavior follows the original.  
+See the [forked link](https://github.com/atotto/clipboard) or [docs documentation](docs/README.original.md) for the original documentation.
 
-Document: 
+## Usage
 
-* http://godoc.org/github.com/atotto/clipboard
+### copy text
 
-Notes:
+```bash
+echo foobazbar | go-clip copy
+```
 
-* Text string only
-* UTF-8 text encoding only (no conversion)
+### paste text
 
-TODO:
-
-* Clipboard watcher(?)
-
-## Commands:
-
-paste shell command:
-
-    $ go get github.com/atotto/clipboard/cmd/gopaste
-    $ # example:
-    $ gopaste > document.txt
-
-copy shell command:
-
-    $ go get github.com/atotto/clipboard/cmd/gocopy
-    $ # example:
-    $ cat document.txt | gocopy
-
-
-
+```bash
+go-clip paste
+```
