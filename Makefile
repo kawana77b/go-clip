@@ -15,3 +15,6 @@ clean:
 	@rm -rf build
 
 .PHONY: clean
+
+credits:
+	@gocredits > CREDITS
