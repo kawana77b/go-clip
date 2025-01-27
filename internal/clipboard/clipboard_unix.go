@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build freebsd || linux || netbsd || openbsd || solaris || dragonfly
 // +build freebsd linux netbsd openbsd solaris dragonfly
 
 package clipboard
@@ -45,7 +46,7 @@ var (
 	termuxPasteArgs = []string{termuxClipboardGet}
 	termuxCopyArgs  = []string{termuxClipboardSet}
 
-	missingCommands = errors.New("No clipboard utilities available. Please install xsel, xclip, wl-clipboard or Termux:API add-on for termux-clipboard-get/set.")
+	errMissingCommands = errors.New("no clipboard utilities available. Please install xsel, xclip, wl-clipboard or Termux:API add-on for termux-clipboard-get/set")
 )
 
 func init() {
@@ -112,7 +113,7 @@ func getCopyCommand() *exec.Cmd {
 
 func readAll() (string, error) {
 	if Unsupported {
-		return "", missingCommands
+		return "", errMissingCommands
 	}
 	pasteCmd := getPasteCommand()
 	out, err := pasteCmd.Output()
@@ -128,7 +129,7 @@ func readAll() (string, error) {
 
 func writeAll(text string) error {
 	if Unsupported {
-		return missingCommands
+		return errMissingCommands
 	}
 	copyCmd := getCopyCommand()
 	in, err := copyCmd.StdinPipe()

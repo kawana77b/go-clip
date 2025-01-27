@@ -3,12 +3,12 @@ package clipboard_test
 import (
 	"fmt"
 
-	"github.com/atotto/clipboard"
+	. "github.com/atotto/clipboard/internal/clipboard"
 )
 
 func Example() {
-	clipboard.WriteAll("日本語")
-	text, _ := clipboard.ReadAll()
+	WriteAll("日本語")
+	text, _ := ReadAll()
 	fmt.Println(text)
 
 	// Output:

@@ -2,6 +2,7 @@
 // Use of this source code is governed by a BSD-style
 // license that can be found in the LICENSE file.
 
+//go:build windows
 // +build windows
 
 package clipboard
@@ -108,7 +109,10 @@ func writeAll(text string) error {
 		return err
 	}
 
-	data := syscall.StringToUTF16(text)
+	data, err := syscall.UTF16FromString(text)
+	if err != nil {
+		return err
+	}
 
 	// "If the hMem parameter identifies a memory object, the object must have
 	// been allocated using the function with the GMEM_MOVEABLE flag."
