@@ -15,6 +15,9 @@ The differences from the original are as follows:
 The basic functionality and behavior follows the original.  
 See the [forked link](https://github.com/atotto/clipboard) or [docs documentation](docs/README.original.md) for the original documentation.
 
+Acknowledgements:  
+I would like to take this opportunity to thank the original authors for creating a great tool.
+
 ## Usage
 
 ### copy text
