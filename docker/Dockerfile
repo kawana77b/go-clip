@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 
 USER $USERNAME
 
-WORKDIR /app
+WORKDIR /workspaces
 
 RUN go install github.com/goreleaser/goreleaser/v2@latest && \
   go install github.com/spf13/cobra-cli@latest && \
