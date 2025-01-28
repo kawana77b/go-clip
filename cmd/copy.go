@@ -1,3 +1,7 @@
+// Copyright 2013 @atotto. All rights reserved.
+// Use of this source code is governed by a BSD-style
+// license that can be found in the LICENSE file.
+
 package cmd
 
 import (
@@ -5,7 +9,7 @@ import (
 	"os"
 	"time"
 
-	"github.com/atotto/clipboard/internal/clipboard"
+	"github.com/kawana77b/go-clip/internal/clipboard"
 	"github.com/spf13/cobra"
 )
 

@@ -1,4 +1,4 @@
-module github.com/atotto/clipboard
+module github.com/kawana77b/go-clip
 
 go 1.23.4
 

@@ -3,7 +3,7 @@ package clipboard_test
 import (
 	"fmt"
 
-	. "github.com/atotto/clipboard/internal/clipboard"
+	. "github.com/kawana77b/go-clip/internal/clipboard"
 )
 
 func Example() {

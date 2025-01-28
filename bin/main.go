@@ -1,6 +1,6 @@
 package main
 
-import "github.com/atotto/clipboard/cmd"
+import "github.com/kawana77b/go-clip/cmd"
 
 var version = "0.1.5"
 
