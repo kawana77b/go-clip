@@ -18,3 +18,10 @@ clean:
 
 credits:
 	@gocredits > CREDITS
+
+.PHONY: credits
+
+test:
+	go test -v ./...	
+
+.PHONY: test
