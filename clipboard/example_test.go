@@ -3,7 +3,7 @@ package clipboard_test
 import (
 	"fmt"
 
-	. "github.com/kawana77b/go-clip/internal/clipboard"
+	. "github.com/kawana77b/go-clip/clipboard"
 )
 
 func Example() {

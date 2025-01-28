@@ -7,7 +7,7 @@ package cmd
 import (
 	"fmt"
 
-	"github.com/kawana77b/go-clip/internal/clipboard"
+	"github.com/kawana77b/go-clip/clipboard"
 	"github.com/spf13/cobra"
 )
 
